@@ -19,7 +19,7 @@ function App() {
   const whatsappLink = `https://wa.me/2349037279075?text=${encodeURIComponent(whatsappMessage)}`
 
   return (
-    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-gradient-to-br from-blue-50 to-indigo-100'} transition-all`}>
+    <div className={`min-h-screen ${darkMode ? 'bg-gray-900 text-white' : 'bg-linear-to-br from-blue-50 to-indigo-100'} transition-all`}>
       <div className="container mx-auto px-4 py-8 max-w-md">
 
         {/* Header */}
@@ -73,7 +73,7 @@ function App() {
 
             {/* Result */}
             {price !== null && (
-              <div className="mt-8 p-6 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-xl text-white text-center">
+              <div className="mt-8 p-6 bg-linear-to-r from-indigo-500 to-purple-600 rounded-xl text-white text-center">
                 <p className="text-sm opacity-90">Estimated Total</p>
                 <p className="text-5xl font-bold mt-2">₦{price.toLocaleString()}</p>
                 <p className="mt-3 text-sm">Ready in 24–48 hours</p>
@@ -86,7 +86,7 @@ function App() {
                 href={whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg text-center flex items-center justify-center gap-3 text-xl"
+                className="mt-6 bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg text-center flex items-center justify-center gap-3 text-xl"
               >
                 <Send className="w-6 h-6" />
                 Place Order on WhatsApp
